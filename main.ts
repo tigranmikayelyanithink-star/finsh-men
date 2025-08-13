@@ -40,7 +40,8 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.collectibleRedCrystal, fu
     game.gameOver(false)
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestOpen, function (sprite, location) {
-	
+    tiles.setCurrentTilemap(tilemap`level4`)
+    tiles.placeOnTile(Men, tiles.getTileLocation(0, 15))
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.collectibleInsignia, function (sprite, location) {
     info.startCountdown(20)
